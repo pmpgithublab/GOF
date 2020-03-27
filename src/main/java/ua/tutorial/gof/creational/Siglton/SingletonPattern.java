@@ -1,5 +1,6 @@
 package ua.tutorial.gof.creational.Siglton;
 
+// https://refactoring.guru/ru/design-patterns/singleton
 public class SingletonPattern {
 
     public static void main(String[] args) {
@@ -7,7 +8,6 @@ public class SingletonPattern {
         singleton.showMessage();
     }
 }
-
 
 class Singleton {
     static Singleton instance;

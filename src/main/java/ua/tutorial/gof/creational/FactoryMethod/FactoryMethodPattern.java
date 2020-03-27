@@ -5,11 +5,18 @@ public class FactoryMethodPattern {
 
     public static void main(String[] args) {
         // changing part of code
-                                      //  ConcreteProductBFactory();
         AbstractProductFactory productFactory = new ConcreteProductAFactory();
-
         // unchanging part of code
         AbstractProduct product = productFactory.createProduct();
+
+        product.produce();
+        product.use();
+        product.util();
+
+        // changing part of code
+        productFactory = new ConcreteProductBFactory();
+        // unchanging part of code
+        product = productFactory.createProduct();
 
         product.produce();
         product.use();
@@ -19,7 +26,9 @@ public class FactoryMethodPattern {
 
 interface AbstractProduct {
     void produce();
+
     void use();
+
     void util();
 }
 

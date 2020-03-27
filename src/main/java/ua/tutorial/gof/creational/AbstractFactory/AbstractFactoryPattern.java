@@ -6,12 +6,26 @@ public class AbstractFactoryPattern {
 
     public static void main(String[] args) {
         // changing part of code
-                                    // createConcreteFactoryBigLaptop();
         AbstractFactory factory = new createConcreteFactorySmallLaptop();
 
         // unchanging part of code
         AbstractProductLaptop laptop = factory.createConcreteProductLaptop();
         AbstractProductMouse mouse = factory.createConcreteProductMouse();
+
+        laptop.turnOn();
+        laptop.works();
+        laptop.turnOff();
+
+        mouse.doubleClick();
+        mouse.scroll();
+
+
+        // changing part of code
+        factory = new createConcreteFactoryBigLaptop();
+
+        // unchanging part of code
+        laptop = factory.createConcreteProductLaptop();
+        mouse = factory.createConcreteProductMouse();
 
         laptop.turnOn();
         laptop.works();
